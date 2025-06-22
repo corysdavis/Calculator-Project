@@ -1,0 +1,15 @@
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\bin\Debug\net6.0\1.5 Project.exe
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\bin\Debug\net6.0\1.5 Project.deps.json
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\bin\Debug\net6.0\1.5 Project.runtimeconfig.json
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\bin\Debug\net6.0\1.5 Project.dll
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\bin\Debug\net6.0\1.5 Project.pdb
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\1.5 Project.csproj.AssemblyReference.cache
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\1.5 Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\1.5 Project.AssemblyInfoInputs.cache
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\1.5 Project.AssemblyInfo.cs
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\1.5 Project.csproj.CoreCompileInputs.cache
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\1.5 Project.dll
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\refint\1.5 Project.dll
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\1.5 Project.pdb
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\1.5 Project.genruntimeconfig.cache
+C:\Users\corys\OneDrive\Desktop\SDC220 - Object-Oriented Programming Using C#\SDC220 Projects\1.5 Project\obj\Debug\net6.0\ref\1.5 Project.dll
