@@ -1,38 +1,113 @@
 ﻿using System;
 
-public class Calculator
+public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("\nSDC220L Project Week 1 === Calculator Application === Cory Davis\n");
+        Console.WriteLine("\n--- SDC220L Project Week 2 --- Calculator Application --- Cory Davis\n");
+        DisplayInstructions();
 
-        Console.WriteLine("Welcome!\n");
-        Console.WriteLine("Instructions for using the calculator:\n");
-        Console.WriteLine("---------------------------------\n");
-        Console.WriteLine("For integer operations: Enter two whole numbers.");
-        Console.WriteLine("The values will be added together and the result will be shown as a whole number.\n");
-        Console.WriteLine("For floating-point operations: Enter two decimal numbers (floating point).");
-        Console.WriteLine("The first value will be subtracted from the second value and the result will be shown rounded to 2 decimal places.\n");
-        Console.WriteLine("---------------------------------\n");
+        Calculator calc = new Calculator();
+        bool running = true;
 
-        Console.Write("Enter first whole number (integer): ");
-        int intNum1 = Convert.ToInt32(Console.ReadLine());
+        while (running)
+        {
+            DisplayMenu();
+            Console.Write("Choose an option: ");
+            string? choice = Console.ReadLine();
 
-        Console.Write("Enter second whole number (integer): ");
-        int intNum2 = Convert.ToInt32(Console.ReadLine());
+            if (choice == "1")
+            {
+                int a = GetValidInt("Enter first whole number: ");
+                int b = GetValidInt("Enter second whole number: ");
+                Console.WriteLine($"Result: {calc.AddIntegers(a, b)}");
+            }
+            else if (choice == "2")
+            {
+                double a = GetValidDouble("Enter first decimal number: ");
+                double b = GetValidDouble("Enter second decimal number: ");
+                Console.WriteLine($"Result: {calc.SubtractDoubles(a, b):F2}");
+            }
+            else if (choice == "3")
+            {
+                int a = GetValidInt("Enter first whole number: ");
+                int b = GetValidInt("Enter second whole number: ");
+                Console.WriteLine($"Result: {calc.MultiplyIntegers(a, b)}");
+            }
+            else if (choice == "4")
+            {
+                double a = GetValidDouble("Enter dividend: ");
+                double b = GetValidDouble("Enter divisor: ");
+                double result = calc.DivideDoubles(a, b);
+                if (double.IsNaN(result))
+                    Console.WriteLine("Error: Division by zero.");
+                else
+                    Console.WriteLine($"Result: {result:F2}");
+            }
+            else if (choice == "5")
+            {
+                Console.Write("Enter a formula: ");
+                string? formula = Console.ReadLine();
+                double result = calc.EvaluateFormula(formula ?? "");
+                if (!double.IsNaN(result))
+                    Console.WriteLine($"Result: {result:F2}");
+            }
+            else if (choice == "6")
+            {
+                running = false;
+            }
+            else
+            {
+                Console.WriteLine("Invalid selection. Please try again.\n");
+            }
 
-        double intResult = intNum1 + intNum2;
-        Console.WriteLine($"Result: {intResult:F0}\n");
+            Console.WriteLine();
+        }
+        Console.WriteLine("Thanks for using the calculator!\n");
+    }
 
-        Console.Write("Enter first floating point number: ");
-        double floatNum1 = Convert.ToDouble(Console.ReadLine());
+    static void DisplayInstructions()
+    {
+        Console.WriteLine("Instructions:");
+        Console.WriteLine(" - Select a number from the menu to perform a calculation.");
+        Console.WriteLine(" - You can perform basic math operations or evaluate a full expression.");
+        Console.WriteLine(" - The program will loop until you choose to quit.\n");
+    }
 
-        Console.Write("Enter second floating point number: ");
-        double floatNum2 = Convert.ToDouble(Console.ReadLine());
+    static void DisplayMenu()
+    {
+        Console.WriteLine("Menu:");
+        Console.WriteLine(" 1 - Add two numbers");
+        Console.WriteLine(" 2 - Subtract two numbers");
+        Console.WriteLine(" 3 - Multiply two numbers");
+        Console.WriteLine(" 4 - Divide two numbers");
+        Console.WriteLine(" 5 - Enter a formula to evaluate");
+        Console.WriteLine(" 6 - Quit");
+    }
 
-        double floatResult = floatNum2 - floatNum1;
-        Console.WriteLine($"Result: {floatResult:F2}\n");
+    static int GetValidInt(string prompt)
+    {
+        while (true)
+        {
+            Console.Write(prompt);
+            string? input = Console.ReadLine();
+            if (int.TryParse(input, out int number))
+                return number;
+            else
+                Console.WriteLine("Invalid input. Please enter a whole number.");
+        }
+    }
 
-        Console.WriteLine("Thank you for using the calculator!");
+    static double GetValidDouble(string prompt)
+    {
+        while (true)
+        {
+            Console.Write(prompt);
+            string? input = Console.ReadLine();
+            if (double.TryParse(input, out double number))
+                return number;
+            else
+                Console.WriteLine("Invalid input. Please enter a decimal number.");
+        }
     }
 }
