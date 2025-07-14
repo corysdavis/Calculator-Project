@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class Calculator
 {
     public int AddIntegers(int a, int b) => a + b;
@@ -17,4 +20,11 @@ public class Calculator
             return double.NaN;
         }
     }
+
+    // Memory for a single number
+    public double? MemoryValue { get; set; }
+
+    // Memory for a collection of up to 10 integers
+    public List<int> IntMemory { get; set; } = new List<int>();
 }
+
