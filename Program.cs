@@ -4,7 +4,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("\n--- SDC220L Project Week 3 --- Calculator Application --- Cory Davis\n");
+        Console.WriteLine("\n--- SDC220L Project Week 4 --- Calculator Application --- Cory Davis\n");
         DisplayInstructions();
 
         Calculator calc = new Calculator();
@@ -60,6 +60,10 @@ public class Program
                     break;
 
                 case "8":
+                    Exceptions.HandleSafeDivision();
+                break;
+
+                case "9":
                     running = false;
                     break;
 
@@ -92,7 +96,8 @@ public class Program
         Console.WriteLine(" 5 - Evaluate a formula");
         Console.WriteLine(" 6 - Single memory operations");
         Console.WriteLine(" 7 - Integer collection memory");
-        Console.WriteLine(" 8 - Quit");
+        Console.WriteLine(" 8 - Division with error handling");
+        Console.WriteLine(" 9 - Quit");
     }
 
     static void HandleSingleMemory(Calculator calc)
@@ -140,6 +145,8 @@ public class Program
         Console.WriteLine(" 5 - Sum of values");
         Console.WriteLine(" 6 - Average of values");
         Console.WriteLine(" 7 - Difference of first and last values");
+        Console.WriteLine(" 8 - Division with error handling");
+
 
         Console.Write("Choose an option: ");
         string? choice = Console.ReadLine();
@@ -198,6 +205,11 @@ public class Program
                 else
                     Console.WriteLine("Need at least two values.");
                 break;
+
+            case "8":
+                    Exceptions.HandleSafeDivision();
+                break;
+
 
             default:
                 Console.WriteLine("Invalid choice.");
