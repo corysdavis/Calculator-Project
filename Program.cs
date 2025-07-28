@@ -4,7 +4,7 @@ public class Program
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine("\n--- SDC220L Project Week 4 --- Calculator Application --- Cory Davis\n");
+        Console.WriteLine("\n--- SDC220L Project Week 5 --- Calculator Application --- Cory Davis\n");
         DisplayInstructions();
 
         Calculator calc = new Calculator();
